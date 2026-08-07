@@ -19,7 +19,7 @@ function Navbar() {
     <header className="fixed top-2 left-0 w-full h-16 z-10">
 
       {/* Navbar for Mobile*/}
-      <div className="md:hidden w-[95%] mx-auto px-4 h-full flex items-center rounded-2xl backdrop-blur-[3px] bg-zinc-900/20 border border-white/10
+      <div className="lg:hidden w-[95%] mx-auto px-4 h-full flex items-center rounded-2xl backdrop-blur-[3px] bg-zinc-900/20 border border-white/10
       ">
         <nav className="font-semibold w-full">
           
@@ -43,7 +43,7 @@ function Navbar() {
 
       {/* Menu da navbar mobile aberto */}
       {menuOpen && (
-        <div className="md:hidden w-[95%] mx-auto px-4 h-full flex items-center rounded-2xl backdrop-blur-[3px] bg-zinc-900/20 border border-white/10 mt-2">
+        <div className="lg:hidden w-[95%] mx-auto px-4 h-full flex items-center rounded-2xl backdrop-blur-[3px] bg-zinc-900/20 border border-white/10 mt-2">
           <nav className="w-full flex items-center justify-center">
             <ul className="flex gap-6">
               {navItems.map((item) => (
@@ -59,7 +59,7 @@ function Navbar() {
       )}
 
       {/* Navbar for Desktop*/}
-      <div className="hidden md:flex w-[80%] mx-auto px-4 h-full flex items-center rounded-2xl bg-zinc-900/20 top-4 backdrop-blur-[5px] border border-white/10">
+      <div className="hidden lg:flex w-[64%] mx-auto px-4 h-full flex items-center rounded-2xl bg-zinc-900/20 top-4 backdrop-blur-[5px] border border-white/10">
         <nav className="w-full text-zinc-400 justify-between flex items-center">
         {/* Logo */}
         <Link to="#contact">@davirandos</Link>
