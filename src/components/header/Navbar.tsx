@@ -48,7 +48,7 @@ function Navbar() {
             <ul className="flex gap-6">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <a href={item.href} active:text-white duration-200 className="text-gray-900 cursor-pointer hover:text-white transition-colors">
+                  <a href={item.href} active:text-white duration-200 className="text-gray-500 cursor-pointer hover:text-white transition-colors">
                     {t(item.label)}
                   </a>
                 </li>
