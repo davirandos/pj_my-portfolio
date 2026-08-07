@@ -1,26 +1,39 @@
-import { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
-export default function Language() {
+export default function LanguageSwitch() {
   const { i18n } = useTranslation();
-  const [language, setLanguage] = useState('en');
 
-  const toggleLanguage = () => {
-    const newLang = language === 'en' ? 'pt' : 'en';
-    i18n.changeLanguage(newLang);
-    setLanguage(newLang);
-  };
-
-  useEffect(() => {
-    setLanguage(i18n.language || 'en');
-  }, [i18n.language]);
+  const currentLanguage = i18n.language;
 
   return (
-    <button
-      onClick={toggleLanguage}
-      className='nav-item'
-    >
-      {language === 'en' ? 'PT' : 'EN'}
-    </button>
+    <div className="flex items-center rounded-full border border-zinc-700 bg-zinc-900 p-1">
+      <button
+        onClick={() => i18n.changeLanguage("pt")}
+        className={`
+          rounded-full px-3 py-1 text-xs transition
+          ${
+            currentLanguage.startsWith("pt")
+              ? "bg-white text-black"
+              : "text-zinc-500 hover:text-white"
+          }
+        `}
+      >
+        PT
+      </button>
+
+      <button
+        onClick={() => i18n.changeLanguage("en")}
+        className={`
+          rounded-full px-3 py-1 text-xs transition
+          ${
+            currentLanguage.startsWith("en")
+              ? "bg-white text-black"
+              : "text-zinc-500 hover:text-white"
+          }
+        `}
+      >
+        EN
+      </button>
+    </div>
   );
 }

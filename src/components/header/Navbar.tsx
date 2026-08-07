@@ -2,42 +2,82 @@ import { useState } from "react";
 import Language from "./Language.js";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
+import { Menu, X } from "lucide-react";
+
+const navItems = [
+  { href: "/", label: "Nav.home" },
+  { href: "/about", label: "Nav.sobre" },
+  { href: "/#projects", label: "Nav.projects" },
+  { href: "/#contact", label: "Nav.contato" },
+];
 
 function Navbar() {
   const { t } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full border-b border-white/20 h-16 backdrop-blur-sm z-[60]">
+    <header className="fixed top-2 left-0 w-full h-16 z-10">
 
-      <div className="max-w-screen-xl mx-auto w-full px-4 h-full flex justify-between items-center">
+      {/* Navbar for Mobile*/}
+      <div className="md:hidden w-[95%] mx-auto px-4 h-full flex items-center rounded-2xl backdrop-blur-[3px] bg-zinc-900/20 border border-white/10
+      ">
+        <nav className="font-semibold w-full">
+          
+          <ul className="flex flex-row items-center text-white w-full justify-between">
 
-        <nav className="flex font-semibold">
-          <ul className="flex flex-row gap-6 items-center text-white">
-            <li>
-              <a href="/" className="nav-item">
-                {t("Nav.home")}
-              </a>
+            <li className="items-center flex">
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="cursor-pointer">
+                {menuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
             </li>
+
             <li>
-              <Link to="/#projects" className="nav-item">
-                {t("Nav.projects")}
-              </Link>
+              <Language />
             </li>
-            <li>
-              <a href="/about" className="nav-item">
-                {t("Nav.sobre")}
-              </a>
-            </li>
-            <li>
-              <a href="/#contact" className="nav-item">
-                {t("Nav.contato")}
-              </a>
-            </li>
+
           </ul>
         </nav>
+      </div>
 
-        <Language />
+      {/* Menu da navbar mobile aberto */}
+      {menuOpen && (
+        <div className="md:hidden w-[95%] mx-auto px-4 h-full flex items-center rounded-2xl backdrop-blur-[3px] bg-zinc-900/20 border border-white/10 mt-2">
+          <nav className="w-full flex items-center justify-center">
+            <ul className="flex gap-6">
+              {navItems.map((item) => (
+                <li key={item.href}>
+                  <a href={item.href} active:text-white duration-200 className="text-gray-900 cursor-pointer hover:text-white transition-colors">
+                    {t(item.label)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      )}
+
+      {/* Navbar for Desktop*/}
+      <div className="hidden md:flex w-[80%] mx-auto px-4 h-full flex items-center rounded-2xl bg-zinc-900/20 top-4 backdrop-blur-[5px] border border-white/10">
+        <nav className="w-full text-zinc-400 justify-between flex items-center">
+        {/* Logo */}
+        <Link to="#contact">@davirandos</Link>
+
+          {/* Barra de navegação */}
+          <ul className="flex flex-row gap-4">
+            {navItems.map((item) => (
+              <li key={item.href} className="hover:text-white hover:bg-zinc-700/20 py-1.5 px-3 rounded-full transition-colors">
+                <a href={item.href} className="hover:text-zinc-300 transition-colors">
+                  {t(item.label)}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {/* Language Selector */}
+          <Language />
+          </nav>
       </div>
       
     </header>
