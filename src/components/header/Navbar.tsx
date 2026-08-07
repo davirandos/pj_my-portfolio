@@ -1,43 +1,56 @@
 import { useState } from "react";
 import Language from "./Language.js";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router";
+import { Menu } from "lucide-react";
+
+const navItems = [
+  { href: "/", label: "Nav.home" },
+  { href: "/about", label: "Nav.sobre" },
+  { href: "/projects", label: "Nav.projects" },
+  { href: "/contact", label: "Nav.contato" },
+];
 
 function Navbar() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full border-b border-white/20 h-16 backdrop-blur-sm z-[60]">
-
-      <div className="max-w-screen-xl mx-auto w-full px-4 h-full flex justify-between items-center">
-
-        <nav className="flex font-semibold">
-          <ul className="flex flex-row gap-6 items-center text-white">
+    <header className="fixed top-2 left-0 w-full h-16 z-10">
+      {/* Navbar for Mobile*/}
+      <div className="md:hidden w-[95%] mx-auto px-4 h-full flex items-center rounded-2xl backdrop-blur-[3px] bg-gray-900/20 border border-white/10
+      ">
+        <nav className="font-semibold w-full">
+          <ul className="flex flex-row items-center text-white w-full justify-between">
             <li>
-              <a href="/" className="nav-item">
-                {t("Nav.home")}
-              </a>
+              <Language />
             </li>
             <li>
-              <Link to="/#projects" className="nav-item">
-                {t("Nav.projects")}
-              </Link>
-            </li>
-            <li>
-              <a href="/about" className="nav-item">
-                {t("Nav.sobre")}
-              </a>
-            </li>
-            <li>
-              <a href="/#contact" className="nav-item">
-                {t("Nav.contato")}
-              </a>
+              <Menu />
             </li>
           </ul>
         </nav>
+      </div>
 
-        <Language />
+      {/* Navbar for Desktop*/}
+      <div className="hidden md:flex w-[80%] mx-auto px-4 h-full flex items-center rounded-2xl bg-gray-900/20 top-4 backdrop-blur-[3px] border border-white/10">
+        <nav className="w-full text-gray-400 justify-between flex items-center">
+          {/* Logo */}
+          <h2>@davirandos</h2>
+
+          {/* Barra de navegação */}
+          <ul className="flex flex-row gap-4">
+            {navItems.map((item) => (
+              <li key={item.href} className="hover:text-white hover:bg-gray-700/20 py-1.5 px-3 rounded-full transition-colors">
+                <a href={item.href} className="hover:text-gray-300 transition-colors">
+                  {t(item.label)}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {/* Language Selector */}
+          <Language />
+          </nav>
       </div>
       
     </header>
