@@ -1,14 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @import "tailwindcss";
 
 body {
   background-color: var(--bg-black);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
+
+.font-italic{
+  font-family: 'Instrument Serif', serif;
+}
+
 
 :root {
   --bg-black: #000000;
@@ -88,11 +93,24 @@ body {
 }
 
 .subtitulos {
-  font-weight: 500;
+  font-weight: 300;
   color: rgb(175, 173, 173);
   text-align: center;
 }
 
+@keyframes tech-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-tech-scroll {
+  animation: tech-scroll 18s linear infinite;
+}
 /* Telas pequenas (celulares) */
 @media (max-width: 600px) {
   .titulo-responsivo {

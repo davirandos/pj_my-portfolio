@@ -7,7 +7,7 @@ const WhatsappButton = () => {
     };
 
     return (
-        <div className="flex items-center text-sm border border-gray-200/20 rounded-2xl py-2 px-4 text-gray-500 w-56 hover:text-green-500 *:cursor-pointer">
+        <div className="flex items-center text-sm backdrop-blur-[10px] bg-zinc-900/20 border border-white/10 rounded-2xl py-2 px-4 text-gray-500 w-56 hover:text-green-500 *:cursor-pointer">
             <MoveUpRight className="h-4 w-4" />
             <button type="button" className="flex relative items-center justify-center w-full" onClick={handleClick}>
                 Falar no WhatsApp
