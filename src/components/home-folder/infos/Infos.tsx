@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import Principles from "./Principles";
 import SectionHeader from "../../ui/SectionHeader";
 
@@ -17,6 +18,8 @@ const Infos = () => {
                     <p className="text-gray-200">{t("infos.firstParag")} </p>
                     <br/>
                     <p className="text-gray-200">{t("infos.secondParag")}</p>
+
+                    <Link className="underline mt-2 cursor-pointer" to="/about">Saiba mais sobre mim</Link>
                 </div>
                 
                 <div className="w-[70%]"><img src="/public/images/download.gif" className="rounded-xl lg:h-78 w-full h-64" alt="" /></div>
