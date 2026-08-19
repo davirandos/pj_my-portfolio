@@ -43,7 +43,7 @@ const TextoPulsante = () => {
 
   return (
     <>
-      <h1 className="text-5xl lg:text-[90px] text-gray-300 font-italic">
+      <h1 className="text-5xl md:text-[70px] text-gray-300 font-italic">
         {displayedText}
         <span className="ml-1 animate-pulse text-white">
           |

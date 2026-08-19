@@ -38,7 +38,7 @@ export default function Home() {
 
           <Tech />
           <ProjectSection />
-          <Contact />
+          {/* <Contato/> */}
         </div>
       </main>
     </>
