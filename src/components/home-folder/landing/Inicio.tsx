@@ -11,7 +11,7 @@ const Inicio = () => {
   return (
     <section
       id="home"
-      className="lg:w-[64%] w-full min-h-screen text-white flex flex-col justify-center items-center relative overflow-hidden gap-10"
+      className=" lg:w-[64%] w-full min-h-screen text-white flex flex-col justify-center items-center relative overflow-hidden gap-10"
     >
       <div className="relative w-[90%] flex flex-col md:flex-column gap-5 justify-center items-center text-center">
 

@@ -1,76 +1,9 @@
-import {
-  Monitor,
-  Server,
-  Database,
-  Box,
-  type LucideIcon,
-} from "lucide-react";
-
-type TechCategory = {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-  tags: string[];
-};
-
-const techCategories: TechCategory[] = [
-  {
-    title: "Frontend & Mobile",
-    description:
-      "React, Next.js, TypeScript e Tailwind CSS. Foco em interfaces modernas, responsivas e performáticas.",
-    icon: Monitor,
-    tags: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-    ],
-  },
-
-  {
-    title: "Backend & APIs",
-    description:
-      "Java, Spring Boot e Node.js. Desenvolvimento de APIs REST e aplicações backend.",
-    icon: Server,
-    tags: [
-      "Java",
-      "Spring Boot",
-      "Node.js",
-      "Express.js",
-      "REST API",
-      "Python"
-    ],
-  },
-
-  {
-    title: "Banco de Dados",
-    description:
-      "Modelagem, consultas e gerenciamento de bancos de dados relacionais.",
-    icon: Database,
-    tags: [
-      "MySQL",
-      "PostgreSQL",
-      "JPA",
-      "Hibernate",
-      "PrismaORM",
-    ],
-  },
-
-  {
-    title: "DevOps & Ferramentas",
-    description:
-      "Versionamento, containers, deploy e ferramentas utilizadas durante o desenvolvimento.",
-    icon: Box,
-    tags: [
-      "Docker",
-      "Git",
-      "GitHub",
-      "Vercel",
-    ],
-  },
-];
+import { techCategories } from "../../../data/tecnologias";
+import { useTranslation } from "react-i18next";
 
 const Cards = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="w-full">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -111,7 +44,7 @@ const Cards = () => {
                 </div>
 
                 <h3 className="text-lg font-semibold text-white">
-                  {title}
+                  {t(title)}
                 </h3>
               </div>
 
@@ -126,7 +59,7 @@ const Cards = () => {
                   text-zinc-500
                 "
               >
-                {description}
+                {t(description)}
               </p>
 
               {/* Tags */}

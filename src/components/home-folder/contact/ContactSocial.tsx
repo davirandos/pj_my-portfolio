@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
-import HoverModal from "../../ui/hoverModal"; // ajuste o caminho se necessário
 import { useTranslation } from "react-i18next";
 
-const SocialLinks = () => {
+const ContactSocial = () => {
   const [emailCopied, setEmailCopied] = useState(false);
 
   const { t } = useTranslation();
@@ -26,49 +25,36 @@ const SocialLinks = () => {
       icon: Linkedin,
       url: "https://linkedin.com/in/davirandos/",
       color: "#0A66C2",
-      user: "@davirandos",
       badge: "💼",
-      description:
-      t("Modal.linkedin"),
+      description: t("Modal.linkedin"),
     },
     {
       name: "GitHub",
       icon: Github,
       url: "https://github.com/davirandos",
       color: "#7e22ce",
-      user: "@davirandos",
       badge: "🐙",
-      description:
-      t("Modal.github"),
+      description: t("Modal.github"),
     },
     {
       name: "E-mail",
       icon: Mail,
       url: "",
       color: "#FB542B",
-      user: "lucctyte@gmail.com",
       badge: "📧",
-      description:
-      t("Modal.email"),
+      description: t("Modal.email"),
     },
   ];
 
   return (
-    <section className="w-[90%] h-full md:w-1/2 px-5 classe-livre flex-col">
-      <div className="w-full sm:w-120 md:w-120: lg:w-120 flex flex-col">
-        <div className="text-left mb-3 text-gray-200">
-          <h3 className="text-2xl font-bold">{t("Contact.Social.title")}</h3>
-          <p className="text-gray-400 text-md sm:text-lg">
-            {t("Contact.Social.description")}
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 gap-4 justify-center">
+    <section className="w-full flex h-full flex-col mt-5">
+      <div className="w-full flex flex-col">
+        <div className="grid grid-cols-2 gap-4">
           {socialLinks.map((social) => {
             const Icon = social.icon;
 
             const commonClasses =
-              "border border-blue-600/20 blur-bg text-gray-300 rounded-lg classe-livre flex-col h-30 w-full p-4 gap-2 transition-all duration-200 cursor-pointer hover:bg-gray-800 hover:border-gray-600 hover:text-white hover:transform hover:scale-105";
+              "border border-white/10 blur-bg text-gray-300 rounded-lg classe-livre flex-row p-3 w-full gap-2 transition-all duration-200 cursor-pointer hover:bg-gray-800 hover:border-gray-600 hover:text-white hover:transform hover:scale-105";
             const styleHandlers = {
               onMouseEnter: (e) => {
                 e.currentTarget.style.borderColor = social.color;
@@ -82,51 +68,32 @@ const SocialLinks = () => {
 
             if (social.name === "E-mail") {
               return (
-                <HoverModal
+                <button
                   key={social.name}
-                  trigger={
-                    <button
-                      onClick={() => handleCopyEmail(social.user)}
-                      className={commonClasses}
-                      {...styleHandlers}
-                    >
-                      <Icon size={24} style={{ color: "inherit" }} />
-                      <span className="font-bold text-sm">
-                        {emailCopied ? "Email copiado!" : social.name}
-                      </span>
-                      <span className="text-sm text-gray-400">
-                        {social.user}
-                      </span>
-                    </button>
-                  }
-                  modalTitulo={social.name}
-                  modalBadge={social.badge}
-                  modalDescricao={social.description}
-                  delay={300}
-                />
+                  onClick={() => handleCopyEmail(social.user)}
+                  className={commonClasses}
+                  {...styleHandlers}
+                >
+                  <Icon size={24} style={{ color: "inherit" }} />
+                  <span className="font-bold text-sm">
+                    {emailCopied ? "Email copiado!" : social.name}
+                  </span>
+                  <span className="text-sm text-gray-400">{social.user}</span>
+                </button>
               );
             }
             return (
-              <HoverModal
+              <a
                 key={social.name}
-                trigger={
-                  <a
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={commonClasses}
-                    {...styleHandlers}
-                  >
-                    <Icon size={24} style={{ color: "inherit" }} />
-                    <span className="font-bold text-sm">{social.name}</span>
-                    <span className="text-sm text-gray-400">{social.user}</span>
-                  </a>
-                }
-                modalTitulo={social.name}
-                modalBadge={social.badge}
-                modalDescricao={social.description}
-                delay={300}
-              />
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={commonClasses}
+                {...styleHandlers}
+              >
+                <Icon size={24} style={{ color: "inherit" }} />
+                <span className="font-bold text-sm">{social.name}</span>
+              </a>
             );
           })}
         </div>
@@ -135,4 +102,4 @@ const SocialLinks = () => {
   );
 };
 
-export default SocialLinks;
+export default ContactSocial;

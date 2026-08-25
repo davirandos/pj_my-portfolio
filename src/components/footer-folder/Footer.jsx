@@ -9,15 +9,15 @@ export default function Footer() {
       <p>
         {t("Footer.text")}
         <a
-          href="https://linkedin.com/in/davttiw/"
+          href="https://linkedin.com/in/davirandos/"
           target="_blank"
           className="nav-item"
         >
-          @davittiw
+          @davirandos
         </a>
       </p>
       
-      <p className="hidden sm:block">&copy; 2025 | {t("Footer.direitos")}</p>
+      <p className="hidden sm:block">&copy; 2026 | {t("Footer.direitos")}</p>
     </footer>
   );
 }

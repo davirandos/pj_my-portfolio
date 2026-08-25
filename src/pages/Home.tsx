@@ -1,11 +1,12 @@
 import Inicio from "../components/home-folder/landing/Inicio";
-import ProjectSection from "../components/home-folder/project/ProjectSection";
+import ProjectSection from "../components/home-folder/project/Projects";
 import Contact from "../components/home-folder/contact/Contact";
 import Tech from "../components/home-folder/tech-stack/Tech"
 
 import { useEffect } from "react";
 import { useLocation } from "react-router";
-import SpotifyActivity from "../components/spotify/SpotifyActivity";
+import Infos from ".././components/home-folder/infos/Infos";
+import Projects from "../components/home-folder/project/Projects";
 
 export default function Home() {
   const location = useLocation();
@@ -24,7 +25,13 @@ export default function Home() {
 
   return (
     <>
-      <main id="home" className="w-full min-h-screen classe-livre flex-col">
+      <main id="home" className="relative w-full min-h-screen classe-livre flex-col" >
+
+        {/* Grade de fundo */}
+          <div className="absolute inset-0 pointer-events-none opacity-4" style={{backgroundImage: `
+          linear-gradient(to right, #e5e7eb 1px, transparent 0px),
+          linear-gradient(to bottom, #e5e7eb 1px, transparent 0px) `, backgroundSize: "36px 36px",}}/>
+
         <div className="w-full min-h-screen classe-livre flex-col flex gap-10 lg:gap-0">
           
           {/* Background Image and Gradient Overlay */}
@@ -36,9 +43,10 @@ export default function Home() {
             <Inicio />
           </div>
 
+          <Infos/>
           <Tech />
-          <ProjectSection />
-          {/* <Contato/> */}
+          <Projects />
+          <Contact/>
         </div>
       </main>
     </>

@@ -7,30 +7,57 @@
   },
 
   "Info": {
-    "dev": "Full-Stack Developer",
-    "hi": "Hi! I'm Luccas Davi",
-    "description": "Full-stack developer passionate about technology, creativity, and continuous learning. Here you'll find projects that reflect my journey, dedication, and desire to grow in the field."
+    "description": "Over 1 year building web applications and systems. Working from database planning to deployment."
+  },
+
+  "infos": {
+    "whoIAm": "WHO I AM",
+    "myNameIs": "My name is ",
+    "firstParag": "Software developer with over 1 year of experience developing scalable web systems. Building projects with Java, Spring Boot, React, and TypeScript.",
+    "secondParag": "My focus goes beyond delivering features. I seek to understand the problem, design well-structured solutions, and build stable, scalable, and maintainable applications. I am looking for projects where I can turn needs into efficient solutions and generate value for companies and clients.",
+    "button-zap": "Contact me on WhatsApp",
+    "button-on": "Available for work",
+    "button-mais": "Learn more about me"
+  },
+
+  "principles": {
+    "label": "PRINCIPLE",
+
+    "learning": {
+      "title": "Continuous learning",
+      "description": "I am always looking to improve my skills, learn new tools, and continuously evolve."
+    },
+
+    "discipline": {
+      "title": "Discipline",
+      "description": "I stay consistent with my studies, projects, and commitments, prioritizing consistent execution instead of relying solely on motivation."
+    },
+
+    "organization": {
+      "title": "Organization",
+      "description": "I like to structure tasks clearly, define priorities, and maintain a workflow that improves productivity."
+    }
   },
 
   "About": {
     "title": "About Me",
-    "description": "Hi! I'm Luccas, a Full-Stack Developer passionate about creating innovative and efficient solutions. With experience in both front-end and back-end development, I enjoy building applications that deliver great user experiences and meet business needs.",
+    "description": "I am a Full-Stack developer passionate about building functional digital solutions. I pay close attention to user experience and seek a balance between performance, accessibility, and intuitive design. \n\n I like to understand the purpose behind each project. Curious by nature, I am always learning, exploring new approaches, and evolving as a professional. \n To me, every line of code is an opportunity to express creativity, solve problems, and build something that truly makes a difference.",
     "phase": "I am made of everything I love.",
     "Academic": {
       "title": "My Academic Journey",
-      "description": "Each course I pursued played a key role in developing my technical skills and shaping my career as a developer.",
+      "description": "Each educational path I pursued played an important role in developing my technical skills and shaping my career as a developer.",
       "titulos": {
         "form1": {
           "title": "Systems Analysis and Development",
-          "description": "A higher education course focused on system design, programming logic, databases, and software architecture."
+          "description": "Higher education program focused on systems development, programming logic, databases, and software architecture."
         },
         "form2": {
-          "title": "System Development",
-          "description": "A technical course that marked the beginning of my journey. I learned the fundamentals of web, mobile, and desktop development, and participated in team-based projects."
+          "title": "Systems Development",
+          "description": "Technical program that marked the beginning of my journey. I learned the fundamentals of web, mobile, and desktop development, while also participating in team projects."
         },
         "form3": {
           "title": "English",
-          "description": "Training focused on improving English communication, with emphasis on technical reading, conversation, and writing."
+          "description": "Education focused on improving English communication, with emphasis on technical reading, conversation, and writing."
         }
       }
     }
@@ -38,62 +65,70 @@
 
   "Tech": {
     "title": "My Technologies",
-    "description": "I’m exploring a variety of technologies that allow me to create complete, modern, and scalable solutions.",
+    "subtitle": "What do I work with?",
+    "description": "I am exploring different technologies that allow me to build complete, modern, and scalable solutions.",
+
+    "items": {
+      "front": "Front-End",
+      "frontDesc": "React, Next.js, TypeScript, and Tailwind CSS. Focused on modern, responsive, and high-performance interfaces.",
+      "back": "Back-End & API",
+      "backDesc": "Java, Spring Boot, and Node.js. Development of REST APIs and backend applications.",
+      "bd": "Databases",
+      "bdDesc": "Modeling, querying, and management of relational databases.",
+      "dev": "DevOps",
+      "devDesc": "Version control, containers, deployment, and tools used throughout the development process."
+    },
+
     "tech-stacks": {
       "react-dec": "A declarative and efficient JavaScript library for building modern user interfaces, especially single-page applications (SPAs).",
-      "next-dec": "A React-based framework offering hybrid rendering (SSR/SSG), automatic routing, and great performance for scalable web apps.",
-      "tailwind-dec": "A utility-first CSS framework that lets you build responsive and modern layouts directly within your HTML.",
-      "node-dec": "A JavaScript runtime environment that enables server-side programming with high performance for APIs and back-end systems.",
-      "express-dec": "A minimalist and flexible framework for Node.js used to quickly and efficiently build web applications and APIs.",
-      "type-dec": "A superset of JavaScript that adds static typing, helping to prevent bugs and improve code maintainability.",
-      "prisma-dec": "A modern ORM for Node.js and TypeScript that simplifies database access and manipulation with safe typing.",
+      "next-dec": "A React-based framework that provides hybrid rendering (SSR/SSG), automatic routing, and excellent performance for scalable web applications.",
+      "tailwind-dec": "A utility-first CSS framework that allows you to build responsive and modern layouts directly with classes, without leaving the markup.",
+      "node-dec": "A server-side JavaScript runtime environment used to build APIs, backend systems, and CLI tools with high performance.",
+      "express-dec": "A minimalist and flexible framework for Node.js, used to build APIs and web applications quickly and efficiently.",
+      "type-dec": "A superset of JavaScript that adds static typing to the code, helping prevent errors and improve application maintainability.",
+      "prisma-dec": "A modern ORM for Node.js and TypeScript that simplifies access to and manipulation of relational databases with type safety.",
       "mysql-dec": "A widely used relational database management system known for its performance, reliability, and ease of use.",
-      "java-dec": "An object-oriented, robust, and cross-platform programming language widely used in enterprise applications and Android development.",
-      "python-dec": "A versatile, simple, and powerful programming language, popular for automation, data analysis, web development, and AI."
+      "java-dec": "A robust, object-oriented, and cross-platform programming language widely used in enterprise applications and Android development.",
+      "python-dec": "A versatile, simple, and powerful programming language widely used for automation, data analysis, web development, and artificial intelligence."
     },
-    "stats-proj": "finished projects",
+    "stats-proj": "completed projects",
     "stats-year": "years of experience"
   },
 
   "Projects": {
-    "title": "Explore My Projects",
-    "description": "Here you'll find some of the projects I’ve developed to put my skills into practice, test new ideas, and solve real-world problems.",
-    "filter": "Filter by language",
-    "button-see": "View",
-    "titles-search": "Projects found",
-    "Project1": {
-      "title": "Weather Checker",
-      "description": "App that queries the OpenWeather API and displays the weather forecast for any city in the world."
-    },
-    "Project2": {
-      "title": "Password Manager",
-      "description": "Generate secure and customized passwords with different complexity options."
-    },
-    "Project3": {
-      "title": "Base Converter",
-      "description": "Easily convert numbers between different numeral systems."
-    },
-    "Project4": {
-      "title": "Portfolio",
-      "description": "This portfolio was built using React and Tailwind CSS, showcasing my skills and projects."
-    },
-    "Project5": {
-      "title": "Bookboxd",
-      "description": "Search for books easily and view detailed information about each one."
+    "subtitle": "Projects",
+    "title": "Explore my work",
+    "description": "Here you can find some of the projects I developed to apply my knowledge, test new ideas, and solve real-world problems.",
+
+    "items": {
+      "fluxa": {
+        "title": "Fluxa Finance | In Development",
+        "description": "Financial management system for businesses, focused on managing assets and liabilities and generating reports through dashboards."
+      },
+
+      "bookboxd": {
+        "title": "Bookboxd",
+        "description": "Digital book collection featuring technical book data retrieved from the OpenLibrary API."
+      },
+
+      "portfolio": {
+        "title": "Portfolio",
+        "description": "My professional portfolio project. (You are viewing it right now :D)"
+      }
     }
   },
 
   "Modal": {
-    "linkedin": "Professional network to connect with colleagues and job opportunities.",
+    "linkedin": "Professional network for connecting with colleagues and job opportunities.",
     "github": "Collaborative development platform for hosting and reviewing code.",
     "email": "Get in touch directly for professional discussions or collaborations."
   },
 
   "Contact": {
     "title": "Get in Touch",
-    "description": "Want to chat, ask questions, give feedback, or maybe collaborate on a project? I'm here!",
+    "description": "Want to talk, ask questions, give feedback, or even start a collaboration? Feel free to reach out!",
     "name": "Name",
-    "type": "Contact Type",
+    "type": "Contact type",
     "typeOptions": {
       "job": "Job Opportunity",
       "partner": "Partnership",
@@ -101,13 +136,13 @@
       "feedback": "Suggestion",
       "other": "Other"
     },
-    "messagePlaceholder": "Type your message here...",
+    "messagePlaceholder": "Write your message here...",
     "message": "Message",
     "send": "Send",
 
     "Social": {
-      "title": "Connect with Me!",
-      "description": "I'm always open to sharing ideas, learning from others, and meeting new people in the tech world."
+      "title": "Connect With Me!",
+      "description": "I am always open to exchanging ideas, sharing knowledge, and meeting new people in the tech field."
     }
   },
 

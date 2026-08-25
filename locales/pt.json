@@ -6,11 +6,43 @@
     "sobre": "Sobre"
   },
 
+
+
   "Info": {
-    "dev": "Desenvolvedor Full-Stack",
-    "hi": "Olá! Eu sou o Luccas Davi",
-    "description": "Desenvolvedor full-stack apaixonado por tecnologia, criatividade e aprendizado contínuo. Aqui você vai encontrar projetos que refletem minha jornada, meu esforço e minha vontade de crescer na área."
+    "description": "Mais de 1 ano construindo aplicações web e sistemas. Atuando desde o planejamento do banco até o deploy."
   },
+  "infos": {
+    "whoIAm": "QUEM SOU",
+    "myNameIs": "Meu nome é ",
+    "firstParag": "Desenvolvedor de software com mais de 1 ano de experiência em desenvolvimento de sistemas web escaláveis. Construindo projetos com java, spring boot, react, typescript.",
+    "secondParag": "Meu foco vai além de entregar funcionalidades, busco entender o problema, estruturar soluções bem projetadas e construir aplicações estáveis, escaláveis e fáceis de manter. Busco projetos onde possa transformar necessidades em soluções eficientes e gerar valor para empresas e clientes.",
+    "button-zap": "Falar no Whatsapp",
+    "button-on": "Disponível para trabalhos",
+    "button-mais": "Saiba mais sobre mim"
+  },
+
+
+
+  "principles": {
+    "label": "PRINCÍPIO",
+
+    "learning": {
+      "title": "Aprendizado contínuo",
+      "description": "Estou sempre buscando melhorar minhas habilidades, aprender novas ferramentas e evoluir de forma constante."
+    },
+
+    "discipline": {
+      "title": "Disciplina",
+      "description": "Mantenho constância nos estudos, projetos e compromissos, priorizando execução consistente em vez de depender apenas de motivação."
+    },
+
+    "organization": {
+      "title": "Organização",
+      "description": "Gosto de estruturar tarefas com clareza, definir prioridades e manter um fluxo de trabalho que facilite a produtividade."
+    }
+  },
+
+
 
   "About": {
     "title": "Sobre Mim",
@@ -36,9 +68,24 @@
     }
   },
 
+
+
   "Tech": {
-    "title": "Minhas Tecnologias",
+    "title": "Minhas tecnologias",
+    "subtitle": "Com o que eu trabalho?",
     "description": "Estou explorando diversas tecnologias que me permitem criar soluções completas, modernas e escaláveis.",
+
+    "items": {
+      "front": "Front-End",
+      "frontDesc": "React, Next.js, TypeScript e Tailwind CSS. Foco em interfaces modernas, responsivas e performáticas.",
+      "back": "Back-End & API",
+      "backDesc": "Java, Spring Boot e Node.js. Desenvolvimento de APIs REST e aplicações backend.",
+      "bd": "Banco de Dados",
+      "bdDesc": "Modelagem, consultas e gerenciamento de bancos de dados relacionais.",
+      "dev": "DevOps",
+      "devDesc": "Versionamento, containers, deploy e ferramentas utilizadas durante o desenvolvimento."
+    },
+
     "tech-stacks": {
       "react-dec": "Biblioteca JavaScript declarativa e eficiente para construir interfaces de usuário modernas, especialmente aplicações de página única (SPA).",
       "next-dec": "Framework baseado em React que oferece renderização híbrida (SSR/SSG), roteamento automático e excelente performance para apps web escaláveis.",
@@ -55,31 +102,28 @@
     "stats-year": "anos de experiência"
   },
 
+
+
   "Projects": {
-    "title": "Conheça meus projetos",
+    "subtitle": "Projetos",
+    "title": "Conheça meu trabalho",
     "description": "Aqui você encontra alguns dos projetos que desenvolvi para colocar em prática meus conhecimentos, testar novas ideias e resolver problemas reais.",
-    "filter": "Filtrar por linguagem",
-    "button-see": "Ver",
-    "titles-search": "Projetos encontrados",
-    "Project1": {
-      "title": "Verificador de Clima",
-      "description": "Aplicação que consulta a API OpenWeather e exibe a previsão do tempo para qualquer cidade do mundo."
-    },
-    "Project2": {
-      "title": "Gerenciador de Senhas",
-      "description": "Gere senhas seguras e personalizadas com diferentes critérios de complexidade."
-    },
-    "Project3": {
-      "title": "Conversor de Bases",
-      "description": "Converta números entre diferentes sistemas numéricos de forma simples e rápida."
-    },
-    "Project4": {
-      "title": "Portfólio",
-      "description": "Este portfólio foi desenvolvido usando React e Tailwind CSS, destacando minhas habilidades e projetos."
-    },
-    "Project5": {
-      "title": "Bookboxd",
-      "description": "Pesquise obras com facilidade e veja os detalhes técnicos."
+
+    "items": {
+      "fluxa": {
+        "title": "Fluxa Finance | Em Produção",
+        "description": "Sistema de gestão financeira para empresas, gestão de passivos, ativos e emite relatórios em dashboard."
+      },
+
+      "bookboxd": {
+        "title": "Bookboxd",
+        "description": "Acervo digital com dados técnicos de livros puxando da OpenLibrary API."
+      },
+
+      "portfolio": {
+        "title": "Portfolio",
+        "description": "Projeto do meu portifolio profissional. (Você está nele agora :D)"
+      }
     }
   },
 
