@@ -18,7 +18,7 @@ export default function Projects() {
     : projects.slice(0, 3);
 
   return (
-    <section className="w-full min-h-screen flex items-center justify-center py-20">
+    <section className="w-[90%] min-h-screen flex items-center justify-center py-20">
       <div className="w-[90%] lg:w-[64%] mx-auto">
 
         {/* Header */}

@@ -57,9 +57,9 @@ const ContactSocial = () => {
   ];
 
   return (
-    <section className="w-full flex h-full flex-col mt-5">
+    <section className="w-full flex flex-col h-full mt-5">
       <div className="w-full flex flex-col">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-2">
           {socialLinks.map((social) => {
             const Icon = social.icon;
 
