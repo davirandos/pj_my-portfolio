@@ -36,7 +36,7 @@ export default function Home() {
           
           {/* Background Image and Gradient Overlay */}
           <div className="relative w-full min-h-screen flex justify-center items-center">
-            <img src="/public/images/a.jpg" className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" />
+            <img src="/images/a.jpg" className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" />
 
             <div className=" absolute inset-x-0 bottom-0 h-[100%] bg-gradient-to-t from-black from-10% via-black/70 via-45% to-transparent to-100% z-0" />
             

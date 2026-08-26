@@ -11,7 +11,7 @@ const Contact = () => {
         <div className='w-full flex md:flex-row flex-col md:justify-around justify-center items-center p-2 gap-5'>
 
           <div className='w-[95%] md:w-[60%]'>
-            <img src="public\images\downloade.gif" className='rounded-xl lg:h-78 w-full h-64' alt="" />
+            <img src="/images/downloade.gif" className='rounded-xl lg:h-78 w-full h-64' alt="" />
           </div>
 
           <div className="w-full md:w-[70%] classe-livre flex-col p-4 ">
