@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { useState } from "react";
+import type { MouseEvent } from "react";
+import { FileText, GithubIcon, LinkedinIcon, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const ContactSocial = () => {
@@ -7,7 +8,7 @@ const ContactSocial = () => {
 
   const { t } = useTranslation();
 
-  const handleCopyEmail = (email) => {
+  const handleCopyEmail = (email: string) => {
     navigator.clipboard
       .writeText(email)
       .then(() => {
@@ -22,7 +23,7 @@ const ContactSocial = () => {
   const socialLinks = [
     {
       name: "LinkedIn",
-      icon: Linkedin,
+      icon: LinkedinIcon,
       url: "https://linkedin.com/in/davirandos/",
       color: "#0A66C2",
       badge: "💼",
@@ -30,16 +31,25 @@ const ContactSocial = () => {
     },
     {
       name: "GitHub",
-      icon: Github,
+      icon: GithubIcon,
       url: "https://github.com/davirandos",
       color: "#7e22ce",
       badge: "🐙",
       description: t("Modal.github"),
     },
     {
-      name: "E-mail",
+      name: "Ver currículo",
+      icon: FileText,
+      url: "/curriculo-luccas-davi.pdf",
+      color: "#7e22ce",
+      badge: "📄",
+      description: "Currículo",
+    },
+    {
+      name: "Email",
       icon: Mail,
       url: "",
+      user: "luccas.devs@gmail.com",
       color: "#FB542B",
       badge: "📧",
       description: t("Modal.email"),
@@ -56,29 +66,35 @@ const ContactSocial = () => {
             const commonClasses =
               "border border-white/10 blur-bg text-gray-300 rounded-lg classe-livre flex-row p-3 w-full gap-2 transition-all duration-200 cursor-pointer hover:bg-gray-800 hover:border-gray-600 hover:text-white hover:transform hover:scale-105";
             const styleHandlers = {
-              onMouseEnter: (e) => {
+              onMouseEnter: (e: MouseEvent<HTMLElement>) => {
                 e.currentTarget.style.borderColor = social.color;
                 e.currentTarget.style.color = social.color;
               },
-              onMouseLeave: (e) => {
+              onMouseLeave: (e: MouseEvent<HTMLElement>) => {
                 e.currentTarget.style.borderColor = "";
                 e.currentTarget.style.color = "";
               },
             };
 
-            if (social.name === "E-mail") {
+            // Normalize name to detect variants like "Email", "email", "E-mail" etc.
+            const normalizedName = social.name?.toLowerCase().replace(/[^a-z]/g, "");
+            const isEmail = normalizedName === "email";
+
+            if (isEmail) {
               return (
                 <button
                   key={social.name}
-                  onClick={() => handleCopyEmail(social.user)}
+                  type="button"
+                  onClick={() => handleCopyEmail(social.user ?? "")}
                   className={commonClasses}
                   {...styleHandlers}
+                  title={emailCopied ? "Email copiado!" : social.name}
+                  aria-label={emailCopied ? "Email copiado" : "Copiar endereço de email"}
                 >
                   <Icon size={24} style={{ color: "inherit" }} />
                   <span className="font-bold text-sm">
                     {emailCopied ? "Email copiado!" : social.name}
                   </span>
-                  <span className="text-sm text-gray-400">{social.user}</span>
                 </button>
               );
             }
@@ -97,6 +113,7 @@ const ContactSocial = () => {
             );
           })}
         </div>
+
       </div>
     </section>
   );
