@@ -8,7 +8,7 @@ type StatProps = {
 
 export default function Stat({ end, suffix = "", label }: StatProps) {
   return (
-    <div className="flex flex-col items-center text-white">
+    <div className="flex flex-col text-white">
       <span className="text-3xl font-bold">
         <CountUp end={end} duration={2.5} suffix={suffix} />
       </span>
