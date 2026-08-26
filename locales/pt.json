@@ -14,8 +14,8 @@
   "infos": {
     "whoIAm": "QUEM SOU",
     "myNameIs": "Meu nome é ",
-    "firstParag": "Desenvolvedor de software com mais de 1 ano de experiência em desenvolvimento de sistemas web escaláveis. Construindo projetos com java, spring boot, react, typescript.",
-    "secondParag": "Meu foco vai além de entregar funcionalidades, busco entender o problema, estruturar soluções bem projetadas e construir aplicações estáveis, escaláveis e fáceis de manter. Busco projetos onde possa transformar necessidades em soluções eficientes e gerar valor para empresas e clientes.",
+    "firstParag": "Desenvolvedor Full Stack com mais de 1 ano de experiência na construção de aplicações web, atuando do planejamento do banco de dados ao deploy. Trabalho principalmente com Java, Spring Boot, React e TypeScript.",
+    "secondParag": "Busco construir soluções estáveis, escaláveis e fáceis de manter, transformando problemas reais em produtos funcionais.",
     "button-zap": "Falar no Whatsapp",
     "button-on": "Disponível para trabalhos",
     "button-mais": "Saiba mais sobre mim"
@@ -28,17 +28,17 @@
 
     "learning": {
       "title": "Aprendizado contínuo",
-      "description": "Estou sempre buscando melhorar minhas habilidades, aprender novas ferramentas e evoluir de forma constante."
+      "description": "Novas tecnologias através de projetos"
     },
 
     "discipline": {
-      "title": "Disciplina",
-      "description": "Mantenho constância nos estudos, projetos e compromissos, priorizando execução consistente em vez de depender apenas de motivação."
+      "title": "Código Sustentável",
+      "description": "Soluções organizadas e fáceis de manter."
     },
 
     "organization": {
-      "title": "Organização",
-      "description": "Gosto de estruturar tarefas com clareza, definir prioridades e manter um fluxo de trabalho que facilite a produtividade."
+      "title": "Visão",
+      "description": "Utilizando conceitos de mobile-first e MVC"
     }
   },
 

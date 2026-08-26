@@ -28,7 +28,7 @@ export default function Home() {
       <main id="home" className="relative w-full min-h-screen classe-livre flex-col" >
 
         {/* Grade de fundo */}
-          <div className="absolute inset-0 pointer-events-none opacity-4" style={{backgroundImage: `
+          <div className="absolute inset-0 pointer-events-none opacity-1" style={{backgroundImage: `
           linear-gradient(to right, #e5e7eb 1px, transparent 0px),
           linear-gradient(to bottom, #e5e7eb 1px, transparent 0px) `, backgroundSize: "36px 36px",}}/>
 

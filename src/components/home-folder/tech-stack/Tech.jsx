@@ -10,7 +10,7 @@ function Tech() {
     <>
       <section
         id="tech"
-        className="relative min-h-screen w-[90%] md:w-[90%] lg:w-[60%] flex-col gap-5 classe-livre overflow-hidden"
+        className="relative min-h-screen w-[90%] md:w-[90%] lg:w-[70%] flex-col gap-5 classe-livre overflow-hidden"
       >
         <div className="info w-[90%] relative z-5 h-auto text-center classe-livre flex-col">
           <SectionHeader

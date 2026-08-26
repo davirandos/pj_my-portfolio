@@ -19,7 +19,7 @@ export default function Projects() {
 
   return (
     <section className="w-full min-h-screen flex items-center justify-center py-20">
-      <div className="w-[90%] lg:w-[55%] mx-auto">
+      <div className="w-[90%] lg:w-[64%] mx-auto">
 
         {/* Header */}
         <SectionHeader
